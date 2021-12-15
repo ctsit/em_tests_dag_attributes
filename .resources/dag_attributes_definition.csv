@@ -1,0 +1,12 @@
+﻿DAG ID,DAG Label,Unique DAG Name,Welcome,Informed Consent,Informed Consent 2,Informed Consent Reconsent,Addendum 1,Addendum 2,Prescription Form,Study Drug Compensation Form,Prescribed Aspirin,notes:
+2953,Harvard,harvard,y,n,y,n,n,y,y,n,y,show [pres_aspirin_yn] and [pres_aspirin_dd]
+2949,University of Florida,university_of_flor,y,y,n,y,y,n,y,n,y,show [pres_aspirin_yn] and [pres_aspirin_dd]
+2951,University of Georgia,university_of_geor,y,n,y,y,n,y,n,y,n,
+2950,University of Miami,university_of_miam,y,y,n,y,y,n,y,n,n,hide [pres_aspirin_yn] and [pres_aspirin_dd]
+2952,Yale,yale,y,y,n,n,n,y,n,y,n,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,Form names,,,,,,,,,,
+,,For branching logic,,,,,,,,,,
+,y,show form or field,,,,,,,,,,
+,n,hide form or field,,,,,,,,,,
