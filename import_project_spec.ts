@@ -1,7 +1,7 @@
 describe('Import project', () => {
     const moduleName = 'DAG Attributes';
+    const moduleDir = 'dag_attributes';
     const Page = Cypress.env('page');
-    const Path = Cypress.env('path');
     const pid = 15;
     const ProjectType = Cypress.env('projectType')
 
@@ -14,7 +14,7 @@ describe('Import project', () => {
 
     it('asserts project was created from xml', () => {
         const filename = 'dag_attributes_project.xml';
-        cy.createCdiscProject('DAG Attributes', ProjectType.Practice, `${Path.cdisc}/${filename}`, pid);
+        cy.createProject('DAG Attributes', ProjectType.Practice, filename, moduleDir, pid);
     })
 
     it('asserts module was enabled for project', () => {
@@ -27,9 +27,12 @@ describe('Import project', () => {
 
     // assert that the csv was properly loaded
     it('asserts csv was properly uploaded', () => {
-        const filename = 'dag_attributes.csv';
+        const filename = 'dag_attributes_definition.csv';
         cy.configureModule(moduleName, {
-           'file_upload' : `cypress/fixtures/${Path.cdisc}/${filename}`
+           'file_upload' : {
+               fileName: filename,
+               moduleDir: moduleDir
+           }
         });
     });
 
